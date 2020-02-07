@@ -6,7 +6,7 @@ pipeline {
                 githubNotify status: "PENDING",
                 credentialsId: "bastiaanlosusernamepassword",
                 account: "bastiaanlos",
-                repo: "myfirstpipeline",
+                repo: "bastiaan-los/myfirstpipeline.git",
                 description: "Mark github commit as pending"
             }
         }
