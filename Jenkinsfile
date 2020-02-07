@@ -1,6 +1,11 @@
 pipeline {
     agent { docker { image 'maven:3.3.3' } }
     stages {
+        stage("github => pending") {
+            steps {
+                githubNotify status: "PENDING", credentialsId: "bastiaanlos", account: "bastiaanlos", repo: "git@github.com:bastiaan-los/myfirstpipeline.git"
+            }
+        }
         stage('build') {
             steps {
                 sh 'mvn --version'
