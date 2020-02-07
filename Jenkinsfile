@@ -4,7 +4,7 @@ pipeline {
         stage("github => pending") {
             steps {
                 githubNotify status: "PENDING",
-                credentialsId: "usernamepassword",
+                credentialsId: "bastiaanlosusernamepassword",
                 account: "bastiaanlos",
                 repo: "myfirstpipeline",
                 description: "Mark github commit as pending"
